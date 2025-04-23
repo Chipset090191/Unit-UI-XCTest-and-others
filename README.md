@@ -21,6 +21,7 @@ So as my app getting the data from the internet the method `decode` is supposed 
     }
 ```
 To run test you should click on rhombus next to your func name. So as you can see we`ve passed our test) succesfully.
+<div align="center">
 <img width="867" alt="Screenshot 2025-04-23 at 7 11 55 PM" src="https://github.com/user-attachments/assets/26c2cd18-9c27-4c26-a45f-d5f6eeae0975" />
-
+</div>
 
