@@ -5,6 +5,25 @@ Here I am gonna just share with you some basic techniques for testing your apps.
 
 1. Unit tests.
 
-let`s just start with unit tests. And on this step I am sure you know how to add a target with Unit XCTest framework😁.
+let`s just start with unit tests. And on this step I am sure you know how to add a target with Unit XCTest framework to your app😁.
+
+```swift
+@MainActor
+func testorderAcceptance() async throws {
+
+    checkoutVC.nameOfDish = "TestDish"
+    checkoutVC.addressTextField.text = "TestAddress"
+    checkoutVC.cityTextField.text = "TestCity"
+    checkoutVC.phoneTextField.text = "TestPhone"
+    
+    await checkoutVC.placeOrder()
+    
+    XCTAssertNotNil(checkoutVC.acceptedOrder)
+    
+    if let myOrder = checkoutVC.acceptedOrder {
+        XCTAssertEqual(myOrder.orderName, checkoutVC.nameOfDish)
+    }
+}
+```
 
 
