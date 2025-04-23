@@ -9,6 +9,7 @@ lets just start with unit tests. And on this step I am sure you know how to add 
 Ok open project `DeliciousMeal` and there file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
 So as my app getting the data from the internet the method `decode` is supposed to be tested. I wrote down test in `testDataFromTheInternet` method to be certain my 10 menu images are gotten from net. And here to be sure that everything is ok we use comand from XCTest framework with our condition: `XCTAssertTrue(menu.count == 10)`. Notice that I created `var menu: [Menu] = []` right before test to assing the result of decode func so as in real code.
+### Pic #1
 ```swift
   func testDataFromTheInternet() throws {
         // made preparations for test
