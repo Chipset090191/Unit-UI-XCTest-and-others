@@ -1,2 +1,2 @@
 # Unit-UI-XCTest-and-others
-Insights into Project Testing
+Unit and UI Test by using XCTest framework.
