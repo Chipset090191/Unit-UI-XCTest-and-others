@@ -41,11 +41,20 @@ Lets just check out how our decode function is covered inside. To do that click 
 
 Ok, I show you ability how to observe statistics when you are on testing. Now you know it.
 
-In Unit tests we have got one more sensitive method which is responsible for order confirmation we have chosen `testorderAcceptance`. 
-Lets look at this closer.
+In Unit tests we have got one more sensitive async method which is responsible for final step where we get our order accepted by food-server. we test this in `testorderAcceptance`. 
+Lets look at this closer. We still stay on file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
-The main thing here
+Now, in this case I make some preparations. By the way there are two methods which are called every time before test run `setUpWithError()` and when it is finished `tearDownWithError()`. :
+- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity getting `placeOrder()` async method to make tests.
 ```swift
+
+ var checkoutVC: CheckoutViewController!
+    
+    override func setUpWithError() throws {
+        checkoutVC = CheckoutViewController()
+    }
+
+
 @MainActor
     func testorderAcceptance() async throws {
 
