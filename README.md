@@ -23,7 +23,7 @@ var menu: [Menu] = []
 ```swift
 XCTAssertTrue(menu.count == 10)
 ```  
-This test ensures the integrity of the decoding process and verifies that our app retrieves the expected number of menu items.
+This test on `Pic #1` ensures the integrity of the decoding process and verifies that our app retrieves the expected number of menu items.
 
 ### Pic #1
 ```swift
