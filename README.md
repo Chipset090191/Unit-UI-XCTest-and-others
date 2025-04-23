@@ -44,8 +44,11 @@ Ok, I show you ability how to observe statistics when you are on testing. Now yo
 In Unit tests we have got one more sensitive async method which is responsible for final step where we get our order accepted by food-server. we test this in `testorderAcceptance`. 
 Lets look at this closer. We still stay on file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
-Now, in this case I make some preparations. By the way there are two methods which are called every time before test run `setUpWithError()` and when it is finished `tearDownWithError()`. :
-- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity applying to `placeOrder()` async method to make tests.
+Now, in this case I make some preparations. By the way there are two methods which are called every time before test run `setUpWithError()` and when it is finished `tearDownWithError()`. Ok, step by step:
+- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity applying to `placeOrder()` async method to make tests;
+- So as my `placeOrder()` is async func I mark my `testorderAcceptance()` as async;
+- Inside `testorderAcceptance()` I fill address, city, phone for textFields on CheckoutViewController so that our guards would work positively.
+- Then I call `await checkoutVC.placeOrder()` and assert the result is not `Nil` in `await checkoutVC.placeOrder()`. So actually we have done. But finally, to make sure the data is correct I assert the last thing and compare the name of dish that was previously set to `TestDish` and data I have got from server `XCTAssertEqual(myOrder.orderName, checkoutVC.nameOfDish)`.
 ```swift
 
  var checkoutVC: CheckoutViewController!
