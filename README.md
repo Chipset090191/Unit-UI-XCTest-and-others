@@ -21,8 +21,8 @@ So as my app getting the data from the internet the method `decode` is supposed 
         XCTAssertTrue(menu.count == 10)
     }
 ```
-To run test you should click on rhombus next to your func name. So as you can see on Pic #2 we`ve passed our test) succesfully with indicator ✅. Also from right side there is a number - 1 that indicates number of calls for this method.<br>
-Pic #2
+To run test you should click on rhombus next to your func name. So as you can see on Pic #2 we`ve passed our test) succesfully with indicator ✅. Also from right side there is a number - 1 that indicates number of calls for this method.
+### Pic #2
 <div align="center">
 <img width="1289" alt="Screenshot 2025-04-23 at 10 41 16 PM" src="https://github.com/user-attachments/assets/2110cbc3-e510-4a48-8e28-c89b1fb8ba11" />
 </div>
