@@ -21,9 +21,18 @@ So as my app getting the data from the internet the method `decode` is supposed 
         XCTAssertTrue(menu.count == 10)
     }
 ```
-To run test you should click on rhombus next to your func name. So as you can see on Pic #2 we`ve passed our test) succesfully with indicator ✅. Also from right side there is a number - 1 that indicates number of calls for this method.
+To run test you should click on rhombus next to your func name. So as you can see on `Pic #2` we`ve passed our test) succesfully with indicator ✅. Also from right side there is a number - 1 that indicates number of calls for this method.
 ### Pic #2
 <div align="center">
 <img width="1289" alt="Screenshot 2025-04-23 at 10 41 16 PM" src="https://github.com/user-attachments/assets/2110cbc3-e510-4a48-8e28-c89b1fb8ba11" />
 </div>
+
+When our test has passed we can dive deeply in statistics as you may look on `Pic #3`. Just click `Show report navigator icon-button` to open it. In this tree you are able to analize the speed of block executions and test coverage. 
+### Pic #3
+<div align="center">
+<img width="1667" alt="Screenshot 2025-04-23 at 11 04 12 PM" src="https://github.com/user-attachments/assets/904b1d10-a5a2-423f-9b4e-7444f9c1e31c" />
+</div>
+
+
+
 
