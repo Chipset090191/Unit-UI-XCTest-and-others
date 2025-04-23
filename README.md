@@ -4,12 +4,15 @@
 Introduction to App Testing
 In this section, I’ll walk you through some foundational techniques for testing iOS applications. While I haven’t written tests for every single feature of my `DeliciousMeal` app, I have focused on covering the most critical and sensitive components. 
 
-1. Unit tests.
+### Unit tests.
+### Step 1: Setting Up Unit Tests
 
 We’ll begin with unit testing. I assume you’re already familiar with adding a Unit Test target to your Xcode project using the XCTest framework😁.
 To get started:
 - Open my DeliciousMeal project in Xcode;
 - Locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+
+### Step 2: Testing Data Decoding from the Internet
 
 Since `DeliciousMeal` retrieves data from the internet, one of the most crucial methods to test is the `decode` function, which processes the incoming data. I created a unit test method named `testDataFromTheInternet` to validate this behavior. Specifically, this test ensures that the app successfully fetches and decodes 10 menu images from the internet.
 
@@ -23,7 +26,7 @@ var menu: [Menu] = []
 ```swift
 XCTAssertTrue(menu.count == 10)
 ```  
-This test on `Pic #1` ensures the integrity of the decoding process and verifies that our app retrieves the expected number of menu items.
+This full code of the test on `Pic #1` ensures the integrity of the decoding process and verifies that our app retrieves the expected number of menu items.
 
 ### Pic #1
 ```swift
@@ -37,7 +40,12 @@ This test on `Pic #1` ensures the integrity of the decoding process and verifies
         XCTAssertTrue(menu.count == 10)
     }
 ```
-To run test you should click on rhombus next to your func name. So as you can see on `Pic #2` we`ve passed our test) succesfully with indicator ✅. Also from right side there is a number - 1 that indicates number of calls for this method.
+
+### Step 3: Running the Unit Test
+
+To execute your test method, simply click on the diamond-shaped icon (rhombus) located next to the function name in the editor. This will run the specific test case individually. As shown in `Pic #2`, the test passed successfully, indicated by the green ✅ symbol. This visual confirmation means the `decode` method is functioning as expected for the scenario being tested.
+Additionally, on the right side of the test result, you’ll notice a number — in this case, 1. This number represents the number of times the test method has been executed during the current session. It can be helpful for tracking execution counts, especially when diagnosing test flakiness or reruns.
+
 ### Pic #2
 <div align="center">
 <img width="1289" alt="Screenshot 2025-04-23 at 10 41 16 PM" src="https://github.com/user-attachments/assets/2110cbc3-e510-4a48-8e28-c89b1fb8ba11" />
