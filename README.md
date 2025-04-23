@@ -33,6 +33,37 @@ When our test has passed we can dive deeply in statistics as you may look on `Pi
 <img width="1667" alt="Screenshot 2025-04-23 at 11 04 12 PM" src="https://github.com/user-attachments/assets/904b1d10-a5a2-423f-9b4e-7444f9c1e31c" />
 </div>
 
+Lets just check out how our decode function is covered inside. To do that click on file `Bundle-decodable.swift`.  So on `Pic #4` with green color we know that our func was called two times where guard block found `url` and no error wasn`t there, means lines with red color were not run. That is good.
+### Pic #4
+<div align="center">
+<img width="1235" alt="Screenshot 2025-04-23 at 11 21 19 PM" src="https://github.com/user-attachments/assets/87a12773-ef82-4a76-abe4-cf9b37e8f423" />
+</div>
+
+Ok, I show you ability how to observe statistics when you are on testing. Now you know it.
+
+In Unit tests we have got one more sensitive method which is responsible for order confirmation we have chosen `testorderAcceptance`. 
+Lets look at this closer.
+
+The main thing here
+```swift
+@MainActor
+    func testorderAcceptance() async throws {
+
+        checkoutVC.nameOfDish = "TestDish"
+        checkoutVC.addressTextField.text = "TestAddress"
+        checkoutVC.cityTextField.text = "TestCity"
+        checkoutVC.phoneTextField.text = "TestPhone"
+        
+        await checkoutVC.placeOrder()
+        
+        XCTAssertNotNil(checkoutVC.acceptedOrder)
+        
+        if let myOrder = checkoutVC.acceptedOrder {
+            XCTAssertEqual(myOrder.orderName, checkoutVC.nameOfDish)
+        }
+    }
+```
+
 
 
 
