@@ -45,7 +45,7 @@ In Unit tests we have got one more sensitive async method which is responsible f
 Lets look at this closer. We still stay on file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
 Now, in this case I make some preparations. By the way there are two methods which are called every time before test run `setUpWithError()` and when it is finished `tearDownWithError()`. :
-- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity getting `placeOrder()` async method to make tests.
+- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity applying to `placeOrder()` async method to make tests.
 ```swift
 
  var checkoutVC: CheckoutViewController!
