@@ -67,7 +67,7 @@ This deeper level of analysis is particularly useful for identifying bottlenecks
 <img width="1667" alt="Screenshot 2025-04-23 at 11 04 12 PM" src="https://github.com/user-attachments/assets/904b1d10-a5a2-423f-9b4e-7444f9c1e31c" />
 </div>
 
-Now, let’s take a closer look at how the decode function is covered during testing.
+Now, let’s take a closer look at how the `decode` function is covered during testing.
 
 To do this:
 
