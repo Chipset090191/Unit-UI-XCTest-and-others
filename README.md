@@ -100,7 +100,7 @@ In `setUpWithError()`, I instantiate the `CheckoutViewController` and assign it 
 
 We initialize it before every test run because we need to access the `placeOrder()` method, which is asynchronous.
 
-# Writing the Async Test
+#### Writing the Async Test
 
 Since placeOrder() is an async function, the test method testOrderAcceptance() is also marked as async.
 
