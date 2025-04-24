@@ -152,8 +152,9 @@ Now we are ready for UI testing🫡.
 #### Pic #4
 <div align="center">
 <img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/45f1c324-a9c4-4f00-9fe0-ead76e38d2af" />
+# 
+<img width="730" alt="Screenshot 2025-04-25 at 1 27 04 AM" src="https://github.com/user-attachments/assets/9f6c5988-b071-434b-8959-8790ab67eaea" />
 
-<img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/90f16443-50a8-483e-9998-2a01ef90c223" />
  
 </div>
 
