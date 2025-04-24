@@ -102,7 +102,7 @@ We initialize it before every test run because we need to access the `placeOrder
 
 #### Writing the Async Test
 
-Since placeOrder() is an async function, the test method testOrderAcceptance() is also marked as async.
+Since `placeOrder()` is an async function, the test method `testOrderAcceptance()` is also marked as async.
 
 Here’s what happens inside the test:
 - I populate the required fields address, city, and phone on checkoutVC. This ensures the guard conditions inside `placeOrder()` pass successfully;
