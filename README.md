@@ -45,7 +45,7 @@ This full code of the test ensures the integrity of the decoding process and ver
 To execute your test method, simply click on the diamond-shaped icon (rhombus) located next to the function name in the editor. This will run the specific test case individually. As shown in `Pic #2`, the test passed successfully, indicated by the green ✅ symbol. This visual confirmation means the `decode` method is functioning as expected for the scenario being tested.
 Additionally, on the right side of the test result, you’ll notice a number — in this case, 1. This number represents the number of times the test method has been executed during the current session. It can be helpful for tracking execution counts, especially when diagnosing test flakiness or reruns.
 
-### Pic #1
+#### Pic #1
 <div align="center">
 <img width="1289" alt="Screenshot 2025-04-23 at 10 41 16 PM" src="https://github.com/user-attachments/assets/2110cbc3-e510-4a48-8e28-c89b1fb8ba11" />
 </div>
@@ -61,7 +61,7 @@ This opens the Report Navigator, where you can:
 - Check test coverage to see which parts of your code were actually exercised during testing.
 This deeper level of analysis is particularly useful for identifying bottlenecks, optimizing performance, and ensuring that your tests are effectively covering the most important parts of your codebase.
 
-### Pic #2
+#### Pic #2
 <div align="center">
 <img width="1667" alt="Screenshot 2025-04-23 at 11 04 12 PM" src="https://github.com/user-attachments/assets/904b1d10-a5a2-423f-9b4e-7444f9c1e31c" />
 </div>
@@ -79,7 +79,7 @@ Here’s what the colors mean:
 
 In this context, seeing the red lines in the error-handling path is actually a positive sign — it means our test scenario didn’t trigger any failures, which aligns with expected behavior.
 
-### Pic #3
+#### Pic #3
 <div align="center">
 <img width="1235" alt="Screenshot 2025-04-23 at 11 21 19 PM" src="https://github.com/user-attachments/assets/87a12773-ef82-4a76-abe4-cf9b37e8f423" />
 </div>
