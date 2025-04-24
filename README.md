@@ -4,7 +4,7 @@
 Introduction to App Testing
 In this section, I’ll walk you through some foundational techniques for testing iOS applications. While I haven’t written tests for every single feature of my `DeliciousMeal` app, I have focused on covering the most critical and sensitive components. 
 
-### Unit tests.
+## Unit tests.
 ### Step 1: Setting Up Unit Tests
 
 We’ll begin with unit testing. I assume you’re already familiar with adding a Unit Test target to your Xcode project using the XCTest framework😁.
