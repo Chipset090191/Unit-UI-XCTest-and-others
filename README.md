@@ -90,7 +90,7 @@ In this context, seeing the red lines in the error-handling path is actually a p
 In addition to testing decoding logic, our unit tests also cover a critical asynchronous method—one that handles the final step of placing an order with the food server. This logic is validated in the method `testOrderAcceptance`, located in the same `UnitTests` file.
 Let’s break down how this works step by step.
 
-# Preparing for the Test
+#### Preparing for the Test
 
 Before diving into the actual test, we need to handle setup and teardown:
 - Xcode provides two lifecycle methods:
