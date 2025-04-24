@@ -51,13 +51,34 @@ Additionally, on the right side of the test result, you’ll notice a number —
 <img width="1289" alt="Screenshot 2025-04-23 at 10 41 16 PM" src="https://github.com/user-attachments/assets/2110cbc3-e510-4a48-8e28-c89b1fb8ba11" />
 </div>
 
-When our test has passed we can dive deeply in statistics as you may look on `Pic #3`. Just click `Show report navigator icon-button` to open it. In this tree you are able to analize the speed of block executions and test coverage. 
+### Step 4: Analyzing Test Results and Performance Metrics
+
+Once your test has passed, you can explore detailed statistics and performance insights. As illustrated in `Pic #3`, click on the `Show Report Navigator` button in Xcode (located in the left sidebar, typically represented by a speech bubble icon).
+
+This opens the Report Navigator, where you can:
+- Review test execution logs;
+- Analyze the performance of individual code blocks;
+- Monitor execution time for each step;
+- Check test coverage to see which parts of your code were actually exercised during testing.
+This deeper level of analysis is particularly useful for identifying bottlenecks, optimizing performance, and ensuring that your tests are effectively covering the most important parts of your codebase.
+
 ### Pic #3
 <div align="center">
 <img width="1667" alt="Screenshot 2025-04-23 at 11 04 12 PM" src="https://github.com/user-attachments/assets/904b1d10-a5a2-423f-9b4e-7444f9c1e31c" />
 </div>
 
-Lets just check out how our decode function is covered inside. To do that click on file `Bundle-decodable.swift`.  So on `Pic #4` with green color we know that our func was called two times where guard block found `url` and no error wasn`t there, means lines with red color were not run. That is good.
+Now, let’s take a closer look at how the decode function is covered during testing.
+
+To do this:
+
+1. Open the file `Bundle-decodable.swift` in Xcode;
+2. With code coverage enabled, you’ll see visual indicators directly in the gutter of your code (refer to `Pic #4`).
+Here’s what the colors mean:
+
+- `Green` lines indicate code that was executed during testing. In our case, the green lines show that the decode function was called twice, and the execution successfully passed through the guard block, meaning a valid URL was found and no error occurred.
+- `Red` lines represent code that was not executed. This usually highlights alternate branches such as error handling or edge cases that didn't occur during the test run.
+In this context, seeing the red lines in the error-handling path is actually a positive sign — it means our test scenario didn’t trigger any failures, which aligns with expected behavior.
+
 ### Pic #4
 <div align="center">
 <img width="1235" alt="Screenshot 2025-04-23 at 11 21 19 PM" src="https://github.com/user-attachments/assets/87a12773-ef82-4a76-abe4-cf9b37e8f423" />
