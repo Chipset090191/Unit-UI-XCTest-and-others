@@ -136,6 +136,30 @@ This ensures not only that the order is successfully placed but also that the re
     }
 ```
 
+## UI tests.
+
+Now, lets change the gear to UI tests. UI test helps us to check user interactions with our application.
+
+### Step 1: Setting Up UI Tests
+
+As with the Unit tests, We are supposed to create a new target. So the actions are:
+- Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
+- In search field type `UI` and choose `UI Testing Bundle` click next;
+- In Product name give the `name` for the test targer as you see on `Pic 4` screenshots. I put the name `UITests`;
+- In created folder `UITests` to choose UITests file.
+Now we are ready for UI testing🫡.
+
+#### Pic #4
+<div align="center">
+<img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/45f1c324-a9c4-4f00-9fe0-ead76e38d2af" />
+
+<img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/90f16443-50a8-483e-9998-2a01ef90c223" />
+ 
+</div>
+
+
+
+
 
 
 
