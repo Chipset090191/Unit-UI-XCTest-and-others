@@ -9,7 +9,7 @@ In this section, I’ll walk you through some foundational techniques for testin
 
 We’ll begin with unit testing. I assume you’re already familiar with adding a Unit Test target to your Xcode project using the XCTest framework😁.
 To get started:
-- Open my DeliciousMeal project in Xcode;
+- Open my `DeliciousMeal` project in Xcode;
 - Locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
 ### Step 2: Testing Data Decoding from the Internet
