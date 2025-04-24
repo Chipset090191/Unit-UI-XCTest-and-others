@@ -85,16 +85,31 @@ In this context, seeing the red lines in the error-handling path is actually a p
 <img width="1235" alt="Screenshot 2025-04-23 at 11 21 19 PM" src="https://github.com/user-attachments/assets/87a12773-ef82-4a76-abe4-cf9b37e8f423" />
 </div>
 
-Ok, I show you ability how to observe statistics when you are on testing. Now you know it.
+### Step 6: Testing Asynchronous Order Placement
 
-In Unit tests we have got one more sensitive async method which is responsible for final step where we get our order accepted by food-server. we test this in `testorderAcceptance`. 
-Lets look at this closer. We still stay on file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+In addition to testing decoding logic, our unit tests also cover a critical asynchronous method—one that handles the final step of placing an order with the food server. This logic is validated in the method `testOrderAcceptance`, located in the same `UnitTests` file.
+Let’s break down how this works step by step.
 
-Now, in this case I make some preparations. By the way there are two methods which are called every time before test run `setUpWithError()` and when it is finished `tearDownWithError()`. Ok, step by step:
-- I declare `checkoutVC` in `final class UnitTests: XCTestCase {}` and instanciate it in `setUpWithError()` every time when test starts. I do so because necessity applying to `placeOrder()` async method to make tests;
-- So as my `placeOrder()` is async func I mark my `testorderAcceptance()` as async;
-- Inside `testorderAcceptance()` I fill address, city, phone for textFields on CheckoutViewController so that our guards would work positively.
-- Then I call `await checkoutVC.placeOrder()` and assert the result is not `Nil` in `await checkoutVC.placeOrder()`. So actually we have done. But finally, to make sure the data is correct I assert the last thing and compare the name of dish that was previously set to `TestDish` and data I have got from server `XCTAssertEqual(myOrder.orderName, checkoutVC.nameOfDish)`.
+# Preparing for the Test
+
+Before diving into the actual test, we need to handle setup and teardown:
+- Xcode provides two lifecycle methods:
+  - `setUpWithError()` — called before each test method runs.
+  - `tearDownWithError()` — called after each test method completes.
+In `setUpWithError()`, I instantiate the `CheckoutViewController` and assign it to a property `checkoutVC`, which I declare at the class level inside `final class UnitTests: XCTestCase`.
+
+We initialize it before every test run because we need to access the `placeOrder()` method, which is asynchronous.
+
+# Writing the Async Test
+
+Since placeOrder() is an async function, the test method testOrderAcceptance() is also marked as async.
+
+Here’s what happens inside the test:
+- I populate the required fields address, city, and phone on checkoutVC. This ensures the guard conditions inside `placeOrder()` pass successfully;
+- I then call - `let myOrder = await checkoutVC.placeOrder()` and validate that the result is not `nil` - `XCTAssertNotNil(myOrder)`;
+- Finally, to confirm data integrity, I verify that the order returned contains the expected dish name - `XCTAssertEqual(myOrder.orderName, checkoutVC.nameOfDish)`.
+This ensures not only that the order is successfully placed but also that the returned data matches what we expect from the input—offering both functional and data-level validation.
+
 ```swift
 
  var checkoutVC: CheckoutViewController!
