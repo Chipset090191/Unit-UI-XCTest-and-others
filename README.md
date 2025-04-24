@@ -7,10 +7,17 @@ In this section, I’ll walk you through some foundational techniques for testin
 ## Unit tests.
 ### Step 1: Setting Up Unit Tests
 
-We’ll begin with unit testing. I assume you’re already familiar with adding a Unit Test target to your Xcode project using the XCTest framework😁.
+
+
+We’ll begin with unit testing. I am gonna give you the sequance of actions for adding a ` Unit test target` to Xcode Project😁 though it is prepared yet in my app `DeliciousMeal`. 
 To get started:
+- Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
+- 
 - Open my `DeliciousMeal` project in Xcode;
 - Locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+
+<img width="727" alt="Screenshot 2025-04-25 at 1 41 20 AM" src="https://github.com/user-attachments/assets/4013ddef-7932-48b3-8956-36c5c404874b" />
+
 
 ### Step 2: Testing Data Decoding from the Internet
 
@@ -152,10 +159,9 @@ Now we are ready for UI testing🫡.
 #### Pic #4
 <div align="center">
 <img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/45f1c324-a9c4-4f00-9fe0-ead76e38d2af" />
-# 
+
 <img width="730" alt="Screenshot 2025-04-25 at 1 27 04 AM" src="https://github.com/user-attachments/assets/9f6c5988-b071-434b-8959-8790ab67eaea" />
 
- 
 </div>
 
 
