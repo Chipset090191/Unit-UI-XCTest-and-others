@@ -13,7 +13,7 @@ We’ll begin with unit testing. I am gonna give you the sequance of actions for
 To get started:
 - Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
 - In search field type `Unit` and choose `Unit Testing Bundle` click next;
-- In Product name give the `name` for the test targer as you see on `Pic 1` screenshots. I put the name `UnitTests`.
+- In Product name give the `name` for the test targer as you see on `Pic 1` screenshots. I put the name `UnitTests`.<br>
 Now you you now how to add the target. For my app `DeliciousMeal` I have added it yet so you do not need this one. Instead of doing this just locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
 #### Pic #1
