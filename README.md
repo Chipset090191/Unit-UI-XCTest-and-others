@@ -9,15 +9,18 @@ In this section, I’ll walk you through some foundational techniques for testin
 
 
 
-We’ll begin with unit testing. I am gonna give you the sequance of actions for adding a ` Unit test target` to Xcode Project😁 though it is prepared yet in my app `DeliciousMeal`. 
+We’ll begin with unit testing. I am gonna give you the sequance of actions for adding a ` Unit test target` to Xcode Project😁. 
 To get started:
 - Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
-- 
-- Open my `DeliciousMeal` project in Xcode;
-- Locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+- In search field type `Unit` and choose `Unit Testing Bundle` click next;
+- In Product name give the `name` for the test targer as you see on `Pic 1` screenshots. I put the name `UnitTests`.
+Now you you now how to add the target. For my app `DeliciousMeal` I have added it yet so you do not need this one. Instead of doing this just locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
+#### Pic #1
+<div align="center">
 <img width="727" alt="Screenshot 2025-04-25 at 1 41 20 AM" src="https://github.com/user-attachments/assets/4013ddef-7932-48b3-8956-36c5c404874b" />
-
+<img width="729" alt="Screenshot 2025-04-25 at 1 49 35 AM" src="https://github.com/user-attachments/assets/be822625-2c57-4146-867b-0c06d33b5e75" />
+</div>
 
 ### Step 2: Testing Data Decoding from the Internet
 
