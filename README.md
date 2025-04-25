@@ -153,7 +153,7 @@ Now, lets change the gear to UI tests. UI test helps us to check user interactio
 
 ### Step 1: Setting Up UI Tests
 
-As with the Unit tests, We are supposed to create a new target. So the actions are:
+As with the Unit tests project `DeliciousMeal` had UI target added. But again there are actions you would know how to add it:
 - Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
 - In search field type `UI` and choose `UI Testing Bundle` click next;
 - In Product name give the `name` for the test targer as you see on `Pic 4` screenshots. I put the name `UITests`;
@@ -167,6 +167,8 @@ Now we are ready for UI testing🫡.
 <img width="730" alt="Screenshot 2025-04-25 at 1 27 04 AM" src="https://github.com/user-attachments/assets/9f6c5988-b071-434b-8959-8790ab67eaea" />
 
 </div>
+
+ 
 
 
 
