@@ -156,7 +156,7 @@ Now, lets change the gear to UI tests. UI test helps us to check user interactio
 As with the Unit tests project `DeliciousMeal` had UI target added. But again there are actions you would know how to add it:
 - Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
 - In search field type `UI` and choose `UI Testing Bundle` click next;
-- In Product name give the `name` for the test targer as you see on `Pic 4` screenshots. I put the name `UITests`;
+- In Product name give the `name` for the test targer as you see on `Pic 5` screenshots. I put the name `UITests`;
 - In created folder `UITests` to choose UITests file.
 Now we are ready for UI testing🫡.
 
@@ -168,8 +168,9 @@ Now we are ready for UI testing🫡.
 
 </div>
 
- 
+### Step 2: Testing UITest
 
+Now locate the file [UITests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UITests/UITests.swift)
 
 
 
