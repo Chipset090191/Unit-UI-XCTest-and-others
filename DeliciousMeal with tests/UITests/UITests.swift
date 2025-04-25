@@ -24,38 +24,37 @@ final class UITests: XCTestCase {
 
     @MainActor
     func testMainOrderingWithOptions() throws {
-        
-        // run app from the start screen
+        // Launch the app from the initial screen
         let app = XCUIApplication()
         app.activate()
-        // we`ve previously added accesibility identifier for our button (look at the ViewController)
+        // Access the "Add Order" button using its accessibility identifier (defined in ViewController)
         let button = app.navigationBars.buttons["addOrder"]
         
-        // check the button existence
+        // Verify the button exists and simulate a tap
         XCTAssertTrue(button.exists)
         button.tap()
         
-        // check the existence of Menu VC
+        // Confirm that the Menu view controller is displayed
         XCTAssert(app.navigationBars["Menu"].waitForExistence(timeout: 1.0))
         
-        // here we choose the second "Gold potato" item. This is a right applying.
+        // Select the second menu item (e.g., "Gold potato")
+        // Alternatively, access the cell using a label (less reliable)
+        // let choosedCell = app.collectionViews.staticTexts["Gold potato"]
         let choosedCell = app.collectionViews.cells.element(boundBy: 1)
         
-        // or you can leverage another simple way like, it`s not good but anyway.
-        // let choosedCell = app.collectionViews.staticTexts["Gold potato"]
         
         XCTAssert(choosedCell.exists)
         choosedCell.tap()
         
-        // suppose to get access to extra options button and tap it
+        // Navigate to the "Extra Options" section
         app.tables.staticTexts["Extra options"].tap()
         
-        // make switches activated inside of this loop
+        // Toggle all available switches
         for switch_element in app.switches.allElementsBoundByIndex {
             switch_element.tap()
         }
         
-        // then we check Increment functionality of steppers
+        // Test the increment functionality of steppers
         for button in app.buttons.matching(identifier: "Increment").allElementsBoundByIndex {
             if button.identifier == "mainStepper-Increment" {
                 button.doubleTap()
@@ -64,33 +63,38 @@ final class UITests: XCTestCase {
             }
         }
         
-        // and then check Decrement functionality
+        // Test the decrement functionality for the main stepper
         app.buttons["mainStepper-Decrement"].tap()
         
-        // and finally on extra options we test picker. So as it is only one element we write "firts match"
+        // Interact with the picker (swipe up on the first available picker)
         app.pickers.firstMatch.swipeUp()
         
-        // then we go back to OrderVC
+        // Navigate back to the Order view controller
         app.buttons["Back"].tap()
         
-        // confirm order
+        // Confirm the order by tapping the cart button
         app/*@START_MENU_TOKEN@*/.buttons["add to shopping cart"]/*[[".navigationBars.buttons[\"add to shopping cart\"]",".buttons[\"add to shopping cart\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        // asserting our alert on this step
+        // Verify that the confirmation alert appears
         XCTAssert(app.alerts["Information about Your order"].waitForExistence(timeout: 1.0))
         
+        // Confirm the alert by tapping "Yes"
         app.buttons["Yes"].tap()
         
+        // Ensure the Checkout view controller is displayed
         XCTAssertTrue(app.staticTexts["Delivery address"].waitForExistence(timeout: 1.0))
         
+        // Access the text fields using assigned accessibility identifiers
         let addressField = app.textFields["addressField"]
         let cityField = app.textFields["cityField"]
         let phoneField = app.textFields["phoneField"]
         
+        // Verify all input fields exist
         XCTAssertTrue(addressField.exists)
         XCTAssertTrue(cityField.exists)
         XCTAssert(phoneField.exists)
         
+        // Populate each field with test data
         addressField.tap()
         addressField.typeText("StreetTest")
         
@@ -100,11 +104,12 @@ final class UITests: XCTestCase {
         phoneField.tap()
         phoneField.typeText("phoneField")
         
+        // Finalize the order by tapping the "Accept" button
         app.buttons["Accept"].tap()
         
-        // and asserting our alert on the final step. Gotcha we are ordered food.
+        // Confirm the final success alert appears
         XCTAssert(app.alerts["Accepted"].waitForExistence(timeout: 2.0))
-       
+        
     }
 
     
