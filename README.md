@@ -7,15 +7,18 @@ In this section, I’ll walk you through some foundational techniques for testin
 ## Unit tests.
 ### Step 1: Setting Up Unit Tests
 
+Let's start with configuring unit testing. I’ll guide you through the sequence of steps for adding a Unit Test Target to your Xcode project.
 
+To add a Unit Test Target:
 
-We’ll begin with unit testing. I am gonna give you the sequance of actions for adding a ` Unit test target` to Xcode Project😁. 
-To get started:
-- Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
-- In search field type `Unit` and choose `Unit Testing Bundle` click next;
-- In Product name give the `name` and choose XCtest(testing systme) as you can see on `Pic 1` screenshots. I put the name `UnitTests`.
+Open `DeliciousMeal` project in Xcode and navigate to File → New → Target.
+- In the search bar, type "Unit" and select `Unit Testing Bundle`;
+- Click Next, then provide a Product Name and ensure that the XCTest framework (Apple’s testing system) is selected.
+(Refer to Pic 1 for a visual guide — in my case, I named it UnitTests.)
 
-Now you you know how to add the target. For my app `DeliciousMeal` I have added it yet so you do not need this one. Instead of doing this just locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+At this point, you should know how to add a Unit Test Target.
+However, for the DeliciousMeal project, the Unit Test Target has already been added, so you can skip this setup.
+Instead, simply locate and open the existing [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift) file.
 
 #### Pic #1
 <div align="center">
@@ -149,29 +152,29 @@ This ensures not only that the order is successfully placed but also that the re
 
 ## UI tests.
 
-Now, lets change the gear to UI tests. UI test helps us to check user interactions with our application.
+Now, let's shift our focus to UI testing. UI tests allow us to validate user interactions and ensure that the application behaves correctly from the user's perspective.
 
 ### Step 1: Setting Up UI Tests
 
-As with the Unit tests project `DeliciousMeal` had UI target added. But again there are actions you would know how to add it:
-- Open `DeliciousMeal` project in Xcode and choose File -> New -> Target;
-- In search field type `UI` and choose `UI Testing Bundle` click next;
-- In Product name give the `name` for the test targer as you see on `Pic 5` screenshots. I put the name `UITests`;
-- In created folder `UITests` to choose UITests file.
-Now we are ready for UI testing🫡.
+Similar to Unit Tests, the `DeliciousMeal` project already has a UI Test Target configured. However, it’s important to understand the process for adding one manually:
+
+- Open the `DeliciousMeal` project in Xcode and navigate to File → New → Target;
+- In the search bar, type `"UI"` and select `UI Testing Bundle`;
+- Click Next, then provide a Product Name for your UI Test Target.
+(Refer to Pic 5 for a visual guide — in this case, I named it UITests.)
+After the target is created, open the newly generated UITests folder and select the main test file inside.
+Now everything is set up and ready — we're fully prepared to begin writing and executing UI tests🫡. 
 
 #### Pic #5
 <div align="center">
 <img width="737" alt="Screenshot 2025-04-25 at 1 21 34 AM" src="https://github.com/user-attachments/assets/45f1c324-a9c4-4f00-9fe0-ead76e38d2af" />
 
 <img width="730" alt="Screenshot 2025-04-25 at 1 27 04 AM" src="https://github.com/user-attachments/assets/9f6c5988-b071-434b-8959-8790ab67eaea" />
-
 </div>
 
 ### Step 2: Testing UITest
 
-Now locate the file [UITests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UITests/UITests.swift). We are gonna test function `testMainOrderingWithOptions()`.
-In this test the system picks up order going through extra options and accept it. 
+Now locate the file [UITests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UITests/UITests.swift). We will be testing the `testMainOrderingWithOptions()` function. In this test, the system simulates placing an order by selecting an item, configuring extra options, and completing the order process.
 
 I attached code here down below with redundant comments. Check this out run and enjoy system`s test actions.
 
@@ -279,14 +282,15 @@ In this line of code I use `addOrder` accessibilityIdentifier.
 let button = app.navigationBars.buttons["addOrder"]
 ```
 
-I do so because I assigned this name in ViewController. In UI testing it is easy to create identifiers so then you simply apply to them.
+I assigned this identifier in the ViewController, making it easy to reference in UI tests.
+Using accessibility identifiers simplifies interacting with UI elements during automated testing.
 
 ```swift
 // viewDidLoad() in ViewController
  addButton.accessibilityIdentifier = "addOrder"
 ```
 
-So the list identifiers I used in my code:
+Here is the list of accessibility identifiers I used in the code:
 - "mainStepper";
 - "firstOptionStepper";
 - "SecondOptionStepper";
@@ -294,18 +298,20 @@ So the list identifiers I used in my code:
 - "cityField";
 - "phoneField".
 
-Also, if you do not know how to apply to an element of your UI you can leverage it by using `record button` while you are on tests.
-To do so:
-- Choose the method you want to test, for example `testMainOrderingWithOptions()`;
-- Set the pointer of mouse to the line where you want to start;
-- Tap the `record` as showen down below on Pic #7;
-- Now when you do actions the system will write down code automatically.
+If you are unsure how to interact with a specific UI element during testing, you can use Xcode’s Record feature to help.
+
+To use it:
+- Select the test method you want to work with (for example, testMainOrderingWithOptions());
+- Place the cursor at the line where you want the recording to insert code;
+- Tap the `Record` button (as shown in Pic #7);
+- As you perform actions in the simulator, Xcode will automatically generate the corresponding test code.
  
 #### Pic #7
 <img width="345" alt="Screenshot 2025-04-26 at 2 46 21 PM" src="https://github.com/user-attachments/assets/edb57a1c-ee36-4f51-8856-438db39ff86b" />
 
-
-We have done ✅. I wrote the concept of how to test your code whether you on Unit or UI. Hope it is clear).
+We’re all set! ✅
+I’ve outlined the key concepts for testing your code, whether you are working with Unit Tests or UI Tests.
+I hope everything is clear and helpful!
 
 
 
