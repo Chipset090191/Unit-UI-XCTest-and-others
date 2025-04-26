@@ -232,7 +232,7 @@ I attached code here down below with redundant comments. Check this out run and 
         app.buttons["Back"].tap()
         
         // Confirm the order by tapping the cart button
-        app/*@START_MENU_TOKEN@*/.buttons["add to shopping cart"]/*[[".navigationBars.buttons[\"add to shopping cart\"]",".buttons[\"add to shopping cart\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["add to shopping cart"].tap()
         
         // Verify that the confirmation alert appears
         XCTAssert(app.alerts["Information about Your order"].waitForExistence(timeout: 1.0))
