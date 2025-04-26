@@ -183,7 +183,7 @@ I attached code here down below with redundant comments. Check this out run and 
 <img width="630" alt="Screenshot 2025-04-26 at 2 20 14 PM" src="https://github.com/user-attachments/assets/9191a8b8-f1a2-46fa-964e-ca44490469f1" />
 </div>
 
-## Here is Video how this thing works:
+## Here is the Video how the system goes through our lines of code step by step:
 
 
 <div align="center">
