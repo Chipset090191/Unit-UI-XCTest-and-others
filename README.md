@@ -66,7 +66,7 @@ Additionally, on the right side of the test result, you’ll notice a number —
 
 ### Step 4: Analyzing Test Results and Performance Metrics
 
-Once your test has passed, you can explore detailed statistics and performance insights. As illustrated in `Pic #3`, click on the `Show Report Navigator` button in Xcode (located in the left sidebar, typically represented by a speech bubble icon).
+Once your test has passed, you can explore detailed statistics and performance insights. As illustrated in `Pic #3`, click on the `Show Report Navigator` button in Xcode (located in the left sidebar).
 
 This opens the Report Navigator, where you can:
 - Review test execution logs;
