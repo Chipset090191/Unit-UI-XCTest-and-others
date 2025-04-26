@@ -186,9 +186,9 @@ I attached code here down below with redundant comments. Check this out run and 
 ## Here is Video how this thing works:
 
 
-
-https://github.com/user-attachments/assets/5c57e5d8-288b-4fe1-abd2-69f57eab2bac
-
+<div align="center">
+<video src="https://github.com/user-attachments/assets/5c57e5d8-288b-4fe1-abd2-69f57eab2bac" controls width="600"></video>
+</div>
 
 
 
