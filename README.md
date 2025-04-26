@@ -272,6 +272,29 @@ I attached code here down below with redundant comments. Check this out run and 
     }
 ```
 
+#### Some explanations on "func testMainOrderingWithOptions()"
+
+In this line of code I use `addOrder` accessibilityIdentifier. 
+```swift
+let button = app.navigationBars.buttons["addOrder"]
+```
+
+I do so because I assigned this name in ViewController. In UI testing it is easy to create identifiers so then you simply apply to them.
+
+```swift
+// viewDidLoad() in ViewController
+ addButton.accessibilityIdentifier = "addOrder"
+```
+
+So the list identifiers I used in my code:
+- "mainStepper";
+- "firstOptionStepper";
+- "SecondOptionStepper";
+- "addressField";
+- "cityField";
+- "phoneField".
+
+
 
 
 
