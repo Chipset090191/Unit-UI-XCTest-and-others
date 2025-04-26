@@ -165,7 +165,7 @@ class CheckoutViewController: UIViewController {
             return
         }
         
-        let url = URL(string: "https://reqres.in/api/DeliciousFood")! // I hope the site will always be there!
+        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")! // I used this free server for posting command. If the site request for your time API key then just try use different resource
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
