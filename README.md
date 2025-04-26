@@ -184,9 +184,13 @@ I attached code here down below with redundant comments. Check this out run and 
 </div>
 
 ## Here is Video how this thing works:
-<div align="center">
-https://github.com/user-attachments/assets/9223139a-26be-40b7-9998-58892385c866
-</div>
+
+
+
+https://github.com/user-attachments/assets/5c57e5d8-288b-4fe1-abd2-69f57eab2bac
+
+
+
 
 ```swift
 @MainActor
@@ -313,7 +317,9 @@ To use it:
 - As you perform actions in the simulator, Xcode will automatically generate the corresponding test code.
  
 #### Pic #7
+<div align="center">
 <img width="345" alt="Screenshot 2025-04-26 at 2 46 21 PM" src="https://github.com/user-attachments/assets/edb57a1c-ee36-4f51-8856-438db39ff86b" />
+</div>
 
 We’re all set! ✅
 I’ve outlined the key concepts for testing your code, whether you are working with Unit Tests or UI Tests.
