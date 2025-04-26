@@ -294,6 +294,18 @@ So the list identifiers I used in my code:
 - "cityField";
 - "phoneField".
 
+Also, if you do not know how to apply to an element of your UI you can leverage it by using `record button` while you are on tests.
+To do so:
+- Choose the method you want to test, for example `testMainOrderingWithOptions()`;
+- Set the pointer of mouse to the line where you want to start;
+- Tap the `record` as showen down below on Pic #7;
+- Now when you do actions the system will write down code automatically.
+ 
+#### Pic #7
+<img width="345" alt="Screenshot 2025-04-26 at 2 46 21 PM" src="https://github.com/user-attachments/assets/edb57a1c-ee36-4f51-8856-438db39ff86b" />
+
+
+We have done ✅. I wrote the concept of how to test your code whether you on Unit or UI. Hope it is clear).
 
 
 
