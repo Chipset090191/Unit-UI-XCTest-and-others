@@ -11,7 +11,7 @@ Let's start with configuring unit testing. I’ll guide you through the sequence
 
 To add a Unit Test Target:
 
-Open `DeliciousMeal` project in Xcode and navigate to File → New → Target.
+- Open `DeliciousMeal` project in Xcode and navigate to File → New → Target;
 - In the search bar, type "Unit" and select `Unit Testing Bundle`;
 - Click Next, then provide a Product Name and ensure that the XCTest framework (Apple’s testing system) is selected.
 (Refer to Pic 1 for a visual guide — in my case, I named it UnitTests.)
