@@ -15,7 +15,7 @@ To get started:
 - In search field type `Unit` and choose `Unit Testing Bundle` click next;
 - In Product name give the `name` and choose XCtest(testing systme) as you can see on `Pic 1` screenshots. I put the name `UnitTests`.
 
-Now you you now how to add the target. For my app `DeliciousMeal` I have added it yet so you do not need this one. Instead of doing this just locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
+Now you you know how to add the target. For my app `DeliciousMeal` I have added it yet so you do not need this one. Instead of doing this just locate and open the file - [UnitTests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UnitTests/UnitTests.swift).
 
 #### Pic #1
 <div align="center">
@@ -173,7 +173,12 @@ Now we are ready for UI testing🫡.
 Now locate the file [UITests](https://github.com/Chipset090191/Unit-UI-XCTest-and-others/blob/main/DeliciousMeal%20with%20tests/UITests/UITests.swift). We are gonna test function `testMainOrderingWithOptions()`.
 In this test the system picks up order going through extra options and accept it. 
 
-I attached code here down below with redundant comments. Check this out and enjoy.
+I attached code here down below with redundant comments. Check this out run and enjoy system`s test actions.
+
+#### Pic #6
+<div align="center">
+<img width="630" alt="Screenshot 2025-04-26 at 2 20 14 PM" src="https://github.com/user-attachments/assets/9191a8b8-f1a2-46fa-964e-ca44490469f1" />
+</div>
 
 ```swift
 @MainActor
